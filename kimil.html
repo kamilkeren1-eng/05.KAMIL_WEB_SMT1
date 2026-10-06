@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Hapus">MUSDI GANK</p>
+    <button onclick="hapusteks()">Klik</button>
+
+    <div id="hasil"></div>
+    <button onclick="tambah()">Klik Saya</button>
+
+    <h1>jumlah Klik: <span id="hitung">0</span></h1>
+    <button onclick="tambahklik()">Klik Saya!</button>
+
+    <P id="teks">ini paragraf dengan style default.</P>
+    <button onclick="ubahstyle()">Ubah Style</button>
+
+    <script>
+// MENGHSPUS
+    function hapusteks() {
+    document.getElementsByTagName("p")[0].remove();
+    }
+
+// MENAMBAH 
+    function tambah() {
+        let elemen = document.createElement("p");
+        elemen.textContent = "Teks Baru Muncul!";
+        document.getElementById("hasil").appendChild(elemen);
+    }
+
+//APK WIRIDAN
+    let jumlahklik = 0;
+    function tambahklik() {
+        jumlahklik++;
+        document.getElementById("hitung").textContent = jumlahklik;
+    }
+    
+    </script>
+>    
+</body>
+</html>

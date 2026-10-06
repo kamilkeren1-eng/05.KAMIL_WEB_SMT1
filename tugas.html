@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data Siswa</title>
+</head>
+<body>
+    <div id="inputan" style="display: block; text-align: center; margin-top: 50px;">
+        <h1>Input Data Siswa</h1>
+        <input type="text" id="input" placeholder="Masukkan Nama">
+        <input type="text" id="input2" placeholder="Masukkan Kelas">
+        <input type="text" id="input3" placeholder="Masukkan Jurusan">
+        <input type="text" id="input4" placeholder="Masukkan Bio">
+        <button onclick="tambah()">Tambah</button>
+    </div>
+
+    <div id="hasil" style="display: none; min-height: 200px; background-color: purple; padding: 20px; text-align: center;">
+    </div>
+
+    <script>
+        function hideInputan() {
+            document.getElementById("inputan").style.display = "none";
+        }
+
+        function showHasil() {
+            document.getElementById("hasil").style.display = "block";
+        }
+
+        function tambah() {
+            let nama = document.getElementById("input").value;
+            let kelas = document.getElementById("input2").value;
+            let jurusan = document.getElementById("input3").value;
+            let bio = document.getElementById("input4").value;
+
+            let hasil = document.getElementById("hasil");
+
+            let h2 = document.createElement("h2");
+            h2.innerHTML = nama;
+            hasil.appendChild(h2);
+
+            let p1 = document.createElement("p");
+            p1.innerHTML = "Kelas: " + kelas;
+            hasil.appendChild(p1);
+
+            let p2 = document.createElement("p");
+            p2.innerHTML = "Jurusan: " + jurusan;
+            hasil.appendChild(p2);
+
+            let p3 = document.createElement("p");
+            p3.innerHTML = "Bio: " + bio;
+            hasil.appendChild(p3);
+
+            hideInputan();
+            showHasil();
+        }
+    </script>
+</body>
+</html>
